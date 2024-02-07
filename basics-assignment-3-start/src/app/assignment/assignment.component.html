@@ -1,0 +1,16 @@
+<button
+    class="btn btn-primary"
+   (click)="onCreateParagraph()"
+>
+    Display Details
+</button>
+
+<p 
+    *ngFor="let paragraph of paragraphs; let i = index;"
+    [ngStyle]="{ backgroundColor: getColor(i) }"
+    [ngClass]="{ highlighted: i >= 4}"
+>   
+    {{ i + 1 }} - {{ paragraph }}
+</p>
+
+
